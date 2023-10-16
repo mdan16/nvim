@@ -1,0 +1,6 @@
+{
+    "suggest.noselect": true,
+    "[go][lua]": {
+        "coc.preferences.formatOnSave": true
+    }
+}
