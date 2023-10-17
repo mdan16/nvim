@@ -34,3 +34,10 @@ require("lazy").setup({
 })
 
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
+vim.g.coc_global_extensions = {
+    "coc-lua",
+    "coc-json",
+    "coc-yaml",
+    "coc-kotlin",
+    "coc-go",
+}
