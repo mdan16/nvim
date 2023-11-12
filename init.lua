@@ -13,29 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("options")
 require("lazy").setup({
-    { "neoclide/coc.nvim",     branch = "release" },
-    { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
-    {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-        opts = {}
-    },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            -- load the colorscheme here
-            vim.cmd([[colorscheme tokyonight]])
-        end,
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = '0.1.4',
-        dependencies = { "nvim-lua/plenary.nvim" }
-    },
+    require("plugins.vimdoc-ja"),
+    require("plugins.coc"),
+    require("plugins.nvim-autopairs"),
+    require("plugins.nvim-tree"),
+    require("plugins.tokyonight"),
+    require("plugins.telescope"),
 })
 
 vim.g.mapleader = ' '
