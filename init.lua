@@ -36,4 +36,5 @@ vim.g.coc_global_extensions = {
     "coc-yaml",
     "coc-kotlin",
     "coc-go",
+    "coc-phpls"
 }
