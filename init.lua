@@ -19,7 +19,8 @@ require("lazy").setup({
     require("plugins.nvim-tree"),
     require("plugins.tokyonight"),
     require("plugins.telescope"),
-    require("plugins.easymotion")
+    require("plugins.easymotion"),
+    require("plugins.diffview")
 })
 
 vim.g.mapleader = ' '
