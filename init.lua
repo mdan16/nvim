@@ -20,7 +20,9 @@ require("lazy").setup({
     require("plugins.tokyonight"),
     require("plugins.telescope"),
     require("plugins.easymotion"),
-    require("plugins.diffview")
+    require("plugins.diffview"),
+    require("plugins.github-copilot"),
+    require("plugins.nvim-cmp"),
 })
 
 vim.g.mapleader = ' '
