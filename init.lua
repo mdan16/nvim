@@ -19,6 +19,7 @@ require("lazy").setup({
     require("plugins.nvim-tree"),
     require("plugins.tokyonight"),
     require("plugins.telescope"),
+    require("plugins.easymotion")
 })
 
 vim.g.mapleader = ' '
@@ -28,6 +29,9 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+local hop = require('hop')
+vim.keymap.set('n', '<leader><leader>', hop.hint_words, {})
 
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
 vim.g.coc_global_extensions = {
