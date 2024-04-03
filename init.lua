@@ -50,6 +50,16 @@ vim.keymap.set('n', '<leader><leader>', hop.hint_words, {})
 local toggleterm = require('toggleterm')
 vim.keymap.set({ 'n', 't' }, '<leader>t', toggleterm.toggle, {})
 
+local terminal = require('toggleterm.terminal').Terminal
+local lazygit = terminal:new {
+    cmd = 'lazygit',
+    direction = 'float',
+    hidden = true,
+}
+vim.keymap.set('n', '<leader>g', function()
+    lazygit:toggle()
+end, {})
+
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
 vim.g.coc_global_extensions = {
     "coc-lua",
