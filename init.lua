@@ -27,6 +27,7 @@ require("lazy").setup({
     require("plugins.nvim-lspconfig"),
     require("plugins.xcodebuild"),
     require("plugins.kotlin-vim"),
+    require("plugins.toggleterm"),
 })
 
 vim.g.mapleader = ' '
@@ -45,6 +46,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xco
 
 local hop = require('hop')
 vim.keymap.set('n', '<leader><leader>', hop.hint_words, {})
+
+local toggleterm = require('toggleterm')
+vim.keymap.set({ 'n', 't' }, '<leader>t', toggleterm.toggle, {})
 
 vim.keymap.set('n', '<C-]>', '<Plug>(coc-definition)')
 vim.g.coc_global_extensions = {
