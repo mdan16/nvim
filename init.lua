@@ -70,7 +70,11 @@ vim.g.coc_global_extensions = {
     "coc-yaml",
     "coc-kotlin",
     "coc-go",
-    "coc-phpls"
+    "coc-phpls",
+    "coc-tsserver",
+    "@yaegassy/coc-volar",
+    "coc-eslint",
+    "coc-prettier",
 }
 
 vim.api.nvim_create_autocmd('LspAttach', {
